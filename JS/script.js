@@ -3,7 +3,7 @@ const menuBtn= document.querySelector("#menu") //hamburger
 const closeMenuBtn = document.querySelector ("#close-menu")
 const menu = document.querySelector ("#mobile-navbar")
 
-const desktopLinks = document.querySelectorAll ("#navbar a") //seleciona tds elementos do msm padrão de seletor ou seja (nav bar a)
+const desktopLinks = document.querySelectorAll ("#navbar a") 
 const mobileLinks = document.querySelectorAll("#mobile-navbar a")
 const allLinks = [...desktopLinks, ...mobileLinks]
 const slides = document.querySelectorAll(".banner")
@@ -64,13 +64,7 @@ closeMenuBtn.addEventListener ("click", (e) => { //ARROW FUNCTION
     menu.classList.remove("menu-active");
     
 }) 
-//ou  |
-//    v
-/*[menuBtn, closeMenuBtn].forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      menu.classList.toggle("menu-active");
-    });
-  }); */
+
 
 allLinks.forEach((link) => {
 link.addEventListener("click",smoothScroll)
